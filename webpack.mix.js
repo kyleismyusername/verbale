@@ -26,7 +26,6 @@ if (local.proxy) {
 mix.tailwind();
 mix.js('assets/js/app.js', 'js');
 mix.sass('assets/scss/app.scss', 'css');
-mix.postCss("assets/css/app.css", "public/css", [require("tailwindcss"),]);
 
 if (mix.inProduction()) {
     mix.versionHash();

@@ -195,15 +195,14 @@ var AnimateOnPageLinks = {
 /***/ }),
 
 /***/ 0:
-/*!****************************************************************************!*\
-  !*** multi ./assets/js/app.js ./assets/scss/app.scss ./assets/css/app.css ***!
-  \****************************************************************************/
+/*!*******************************************************!*\
+  !*** multi ./assets/js/app.js ./assets/scss/app.scss ***!
+  \*******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! C:\Users\kylea\Local Sites\caio\app\public\wp-content\themes\verbale\assets\js\app.js */"./assets/js/app.js");
-__webpack_require__(/*! C:\Users\kylea\Local Sites\caio\app\public\wp-content\themes\verbale\assets\scss\app.scss */"./assets/scss/app.scss");
-!(function webpackMissingModule() { var e = new Error("Cannot find module 'C:\\Users\\kylea\\Local Sites\\caio\\app\\public\\wp-content\\themes\\verbale\\assets\\css\\app.css'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+module.exports = __webpack_require__(/*! C:\Users\kylea\Local Sites\caio\app\public\wp-content\themes\verbale\assets\scss\app.scss */"./assets/scss/app.scss");
 
 
 /***/ })
