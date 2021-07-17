@@ -25,6 +25,6 @@ require get_stylesheet_directory() . '/includes/scripts-and-styles.php';
 // Register navigation menu
 function register_nav()
 {
-    register_nav_menu('header-menu', __('Header Menu'));
+    register_nav_menus(array('header-menu' =>  __('Header Menu'), 'footer-menu' => __('Footer Menu')));
 }
 add_action('init', 'register_nav');

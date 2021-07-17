@@ -10,10 +10,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Pontano+Sans:ital,wght@0,300;0,400;0,500;1,600&family=Noto+Serif:ital@0;1&display=swap");
 
 // Typography
+
+::selection {
+    background-color: #435562;
+    color: white;
+}
 html {
     font-family: "Pontano Sans", sans-serif;
     font-size: 18px;
-    color: #3f4a49;
+    color: #435562;
 }
 h1,
 h2 {
@@ -26,42 +31,40 @@ h5 {
     font-weight: 600;
 }
 h1 {
-    font-size: clamp(40px, 6vw, 3.75rem);
-}
-#hp-hero {
-    h1 {
-        font-size: clamp(36px, 6vw, 3.25rem);
-    }
-}
-.container {
-    max-width: 1500px;
+    // font-size: clamp(40px, 6vw, 3.75rem);
+    font-size: clamp(2rem, 6vw, 3rem);
 }
 
-.btn {
-    width: fit-content;
-    @apply block text-sm bg-salmon-500 text-white uppercase text-center tracking-widest;
-    &:hover {
-        @apply bg-salmon-400;
-    }
+a {
+    @apply hover:opacity-80;
+}
+.prose a {
+    @apply text-salmon-500 font-medium hover:opacity-80;
 }
 // Nav
 nav {
     @apply absolute w-full top-0 z-50;
     .inner {
         @apply flex flex-row items-center justify-between gap-x-8;
-        padding: 1rem 4vw;
+        padding: 1rem 1rem;
         .menu {
             @apply flex flex-row gap-8;
             .menu-item {
                 padding: 2px 0;
+                @apply hover:underline;
+                text-underline-offset: 6px;
             }
             .current-menu-item {
-                @apply border-b border-white;
+                text-decoration: underline;
+            }
+            .no-underline {
+                text-decoration: none;
+                font-weight: normal;
             }
         }
     }
     .mobile {
-        padding: 1rem 5vw;
+        padding: 1rem 1rem;
         @apply w-full bg-white border-b border-indigo-100 shadow-md;
         .menu-item {
             padding: 1rem 0;
@@ -75,6 +78,10 @@ nav {
         }
         .current-menu-item {
             @apply font-semibold;
+        }
+        .no-underline {
+            text-decoration: none;
+            font-weight: normal;
         }
     }
 }
@@ -98,33 +105,41 @@ footer {
         padding: 6px 40px 6px 10px;
     }
 }
-#hp-hero {
-    position: relative;
-    .bg-img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        opacity: 0.9;
-        img {
-            object-fit: cover;
-            width: 100%;
-            height: 100%;
-        }
-        // mayfair, perpetua, valencia, xpro2
+.container {
+    max-width: 1300px;
+}
+.btn {
+    @apply text-sm bg-salmon-500 text-white uppercase text-center tracking-widest;
+    &:hover {
+        @apply bg-salmon-400;
+    }
+}
+// SVG icons
+// #team {
+//     svg {
+//         @apply fill-current w-16 h-16 mx-auto;
+//     }
+// }
+.svg-icon {
+    svg {
+        @apply fill-current text-indigo-600 w-full h-full;
+    }
+}
+.brand-logo {
+    svg {
+        @apply w-full h-full;
     }
 }
 
 // Hero Sections
 #hero {
     position: relative;
-    height: 50vh;
     .bg-img {
         position: absolute;
         top: 0;
         left: 0;
         height: 100%;
-        opacity: 0.9;
+        width: 100%;
         img {
             object-fit: cover;
             width: 100%;
@@ -151,8 +166,18 @@ select,
 select[multiple],
 input[type="checkbox"],
 input[type="radio"] {
-    @apply ring-0 border border-gray-300;
+    @apply ring-0 border border-indigo-300;
     &:focus {
-        @apply ring-1 border-gray-500 ring-gray-500;
+        @apply ring-1 border-indigo-500 ring-indigo-500;
+    }
+}
+input[type="submit"] {
+    @apply btn w-full py-4;
+}
+
+// WP Styles
+.wp-block-image {
+    img {
+        width: 100%;
     }
 }

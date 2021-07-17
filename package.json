@@ -25,13 +25,14 @@
     "laravel-mix-purgecss": "^4.2.0",
     "laravel-mix-tailwind": "^0.1.0",
     "laravel-mix-versionhash": "1.0.8",
+    "postcss": "^8.1.10",
     "resolve-url-loader": "2.3.1",
     "sass": "^1.30.0",
     "sass-loader": "^8.0.2",
-    "vue-template-compiler": "^2.6.12",
-    "postcss": "^8.1.10"
+    "vue-template-compiler": "^2.6.12"
   },
   "dependencies": {
+    "@iconfu/svg-inject": "^1.2.3",
     "@tailwindcss/forms": "^0.3.2",
     "@tailwindcss/postcss7-compat": "^2.1.2",
     "@tailwindcss/typography": "^0.4.0",

@@ -16,7 +16,7 @@ const AnimateOnPageLinks = {
     duration: 800,
     offset: -100,
 
-    init () {
+    init() {
 
         $('a').on('click', (e) => {
 
@@ -46,18 +46,18 @@ const AnimateOnPageLinks = {
                 // subtract any additional height considerations to scroll_top (e.g; height of sticky header)
                 //scroll_top -= $('.sticky-page-header').outerHeight();
 
-                $('html, body').animate({scrollTop: scroll_top}, this.duration, 'swing', () => $target_element.trigger('scrolled_to'));
+                $('html, body').animate({ scrollTop: scroll_top }, this.duration, 'swing', () => $target_element.trigger('scrolled_to'));
             }
 
         });
 
     },
 
-    is_excluded ($selector) {
+    is_excluded($selector) {
         return !!$selector.data('toggle');
     },
 
-    link_is_targeting_on_page_anchor (link) {
+    link_is_targeting_on_page_anchor(link) {
         return /^#/.test(link);
     }
 

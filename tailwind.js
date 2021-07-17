@@ -11,7 +11,7 @@ module.exports = {
     theme: {
         container: {
             center: true,
-            padding: '4vw',
+            padding: '1rem',
             screens: {
                 sm: "400px",
                 md: "648px",
@@ -40,16 +40,27 @@ module.exports = {
                     800: "#553c32",
                     900: "#2a1e19"
                 },
+                // indigo: {
+                //     100: "#dbdede",
+                //     200: "#b6bdbc",
+                //     300: "#929c9b",
+                //     400: "#6d7b79",
+                //     500: "#495a58",
+                //     600: "#3a4846",
+                //     700: "#2c3635",
+                //     800: "#1d2423",
+                //     900: "#0f1212"
+                // },
                 indigo: {
-                    100: "#dbdede",
-                    200: "#b6bdbc",
-                    300: "#929c9b",
-                    400: "#6d7b79",
-                    500: "#495a58",
-                    600: "#3a4846",
-                    700: "#2c3635",
-                    800: "#1d2423",
-                    900: "#0f1212"
+                    100: "#dde1e5",
+                    200: "#bbc3ca",
+                    300: "#98a6b0",
+                    400: "#768895",
+                    500: "#435562",
+                    600: "#435562",
+                    700: "#32404a",
+                    800: "#222a31",
+                    900: "#111519"
                 },
                 tan: {
                     100: "#f8f7f6",
@@ -73,6 +84,28 @@ module.exports = {
                     800: "#191e1d",
                     900: "#0d0f0f"
                 },
+                darkpurple: {
+                    100: "#d3cfd3",
+                    200: "#a7a0a7",
+                    300: "#7b707b",
+                    400: "#4f414f",
+                    500: "#231123",
+                    600: "#1c0e1c",
+                    700: "#150a15",
+                    800: "#0e070e",
+                    900: "#070307"
+                },
+                sienna: {
+                    100: "#dad2d3",
+                    200: "#b6a5a7",
+                    300: "#91777c",
+                    400: "#6d4a50",
+                    500: "#481d24",
+                    600: "#3a171d",
+                    700: "#2b1116",
+                    800: "#1d0c0e",
+                    900: "#0e0607"
+                },
             },
             fontSize: {
                 xxs: '0.675rem',
@@ -80,14 +113,20 @@ module.exports = {
             lineHeight: {
                 tighter: '1.125',
             },
+            height: theme => ({
+                "screen/2": "50vh"
+            }),
+            width: {
+                fit: 'fit-content'
+            },
             typography: {
                 DEFAULT: {
                     css: {
                         maxWidth: 'auto',
                         fontSize: '1rem',
-                        color: '#3f4a49',
+                        color: '#435562',
                         a: {
-                            color: '#159D99',
+                            color: '#d4967d',
                             textDecoration: 'none',
                             fontWeight: '600',
                             '&:hover': {
@@ -97,23 +136,23 @@ module.exports = {
                         h1: {
                             // fontSize: '3rem',
                             fontWeight: '300',
-                            color: '#3f4a49'
+                            color: '#435562',
                         },
                         h2: {
                             fontWeight: '400',
-                            color: '#3f4a49'
+                            color: '#435562',
                         },
                         h3: {
-                            color: '#3f4a49'
+                            color: '#435562',
                         },
                         h4: {
-                            color: '#3f4a49'
+                            color: '#435562',
                         },
                         h5: {
-                            color: '#3f4a49'
+                            color: '#435562',
                         },
                         h6: {
-                            color: '#3f4a49'
+                            color: '#435562',
                         },
                         pre: {
                             backgroundColor: '#3f3e3b',
@@ -123,6 +162,9 @@ module.exports = {
                             li: ['before']
                         },
                         strong: {
+                            color: 'inherit'
+                        },
+                        blockquote: {
                             color: 'inherit'
                         }
                     },
