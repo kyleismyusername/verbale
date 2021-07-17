@@ -1,8 +1,9 @@
 <?php
-$bg_img = get_field('bg_img') ?: get_stylesheet_directory_uri().'/assets/img/group-3.jpg';
+$bg_img = get_field('bg_img') ?: 'https://source.unsplash.com/Gg7uKdHFb_c/1920x1280';
 $title = get_field('headline') ?: get_the_title();
 ?>
-<section id="hero" class="h-screen/2 bg-indigo-700">
+<!-- <section id="hero" class="h-screen/2 bg-indigo-700"> -->
+<section id="hero" class="bg-indigo-700">
     <div class="bg-img mayfair opacity-30">
         <img src="<?= $bg_img; ?>" alt="<?= $title; ?>">
     </div>
